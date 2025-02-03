@@ -129,21 +129,21 @@
 
 		<Action Name="Sprawl" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/Jiya_disco_00001.png" ImageAnchor="64,136" Velocity="-1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00003.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00005.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00007.png" ImageAnchor="64,136" Velocity="-1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00009.png" ImageAnchor="64,136" Velocity="-1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00011.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00011.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00013.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00013.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00014.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00015.png" ImageAnchor="64,136" Velocity="-1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00015.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00016.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 			</Animation>
 		</Action>
@@ -173,27 +173,27 @@
 
 		<Action Name="GrabCeiling" Type="Stay" BorderType="Ceiling">
 			<Animation>
-				<Pose Image="/Jiya_reverse_0001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/Jiya_reverse_0002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/Jiya_reverse_0003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/Jiya_reverse_0004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/Jiya_reverse_0005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/Jiya_reverse_0006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/Jiya_reverse_0007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/Jiya_reverse_0008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0001.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0002.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0003.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0004.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0005.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0006.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0007.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
+				<Pose Image="/Jiya_reverse_0008.png" ImageAnchor="64,12" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
 		
 		<Action Name="ClimbCeiling" Type="Move" BorderType="Ceiling">
 			<Animation>
-				<Pose Image="/Jiya_walk_reverse_0001.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
-				<Pose Image="/Jiya_walk_reverse_0002.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
-				<Pose Image="/Jiya_walk_reverse_0003.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
-				<Pose Image="/Jiya_walk_reverse_0004.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
-				<Pose Image="/Jiya_walk_reverse_0005.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
-				<Pose Image="/Jiya_walk_reverse_0006.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
-				<Pose Image="/Jiya_walk_reverse_0007.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
-				<Pose Image="/Jiya_walk_reverse_0008.png" ImageAnchor="64,136" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0001.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0002.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0003.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0004.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0005.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0006.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0007.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
+				<Pose Image="/Jiya_walk_reverse_0008.png" ImageAnchor="64,12" Velocity="-2,0" Duration="6" />
 			</Animation>
 		</Action>
 
@@ -743,22 +743,22 @@
 		<Action Name="Divide1" Type="Embedded" Class="com.group_finity.mascot.action.Breed"
 			BornX="-16" BornY="0" BornBehavior="Divided">
 			<Animation>
-				<Pose Image="/Jiya_disco_00001.png" ImageAnchor="64,136" Velocity="-1,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00001.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00002.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00003.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00004.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00005.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00007.png" ImageAnchor="64,136" Velocity="-1,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00009.png" ImageAnchor="64,136" Velocity="-1,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00006.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00007.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00008.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00009.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00010.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00011.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00012.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
 				<Pose Image="/Jiya_disco_00013.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00014.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00015.png" ImageAnchor="64,136" Velocity="-1,0" Duration="50" />
-				<Pose Image="/Jiya_disco_00016.png" ImageAnchor="64,136" Velocity="0,0" Duration="50" />
+				<Pose Image="/Jiya_disco_00014.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00015.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
+				<Pose Image="/Jiya_disco_00016.png" ImageAnchor="64,136" Velocity="1,0" Duration="5" />
 			</Animation>
 		</Action>
 		<Action Name="SplitIntoTwo" Type="Sequence">
