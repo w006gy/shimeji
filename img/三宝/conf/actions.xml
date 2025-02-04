@@ -23,43 +23,43 @@
 
 		<Action Name="Walk" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
+				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 			</Animation>
 		</Action>
 
 		<Action Name="Run" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
+				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 			</Animation>
 		</Action>
 
 		<Action Name="Dash" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
-				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="7,0" Duration="2" />
+				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
+				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
 			</Animation>
 		</Action>
 
@@ -229,15 +229,15 @@
 
 		<Action Name="Creep" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="3,0" Duration="4" />
+				<Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 			</Animation>
 		</Action>
 
@@ -258,15 +258,15 @@
 		
 		<Action Name="ClimbCeiling" Type="Move" BorderType="Ceiling">
 			<Animation>
-				<Pose Image="/S_run_00r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_01r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_02r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_03r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_04r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_05r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_06r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_07r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
-				<Pose Image="/S_run_08r.png" ImageAnchor="64,12" Velocity="3,0" Duration="4" />
+				<Pose Image="/S_run_00r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_01r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_02r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_03r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_04r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_05r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_06r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_07r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
+				<Pose Image="/S_run_08r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
 			</Animation>
 		</Action>
 
