@@ -51,7 +51,7 @@
 				</NextBehaviorList>
 			</Behavior>
 			
-			<Behavior Name="SplitIntoTwo" Frequency="50" Condition="#{mascot.totalCount &lt; 50}" />
+			<Behavior Name="SplitIntoTwo" Frequency="50" Condition="#{mascot.totalCount &lt; 10}" />
 		</Condition>
 
 		<!-- On the Wall -->
@@ -91,7 +91,7 @@
 			<Behavior Name="JumpFromBottomOfIE" Frequency="50" Condition="#{mascot.anchor.x &gt;= mascot.environment.activeIE.left &amp;&amp;
 				mascot.anchor.x &lt; mascot.environment.activeIE.right}" />
 				
-			<Behavior Name="PullUpShimeji" Frequency="50" Condition="#{mascot.totalCount &lt; 50}" />
+			<Behavior Name="PullUpShimeji" Frequency="50" Condition="#{mascot.totalCount &lt; 10}" />
 		</Condition>
 		
 		<!-- On Work Area Facing the Wall -->
