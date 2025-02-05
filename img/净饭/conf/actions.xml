@@ -740,7 +740,9 @@
 			</Animation>
 		</Action>
 		<Action Name="PullUpShimeji2" Type="Animate">
-			<ActionReference Name="Look" />
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+			</Animation>
 		</Action>
 		<Action Name="PullUpShimeji" Type="Sequence">
 			<ActionReference Name="PullUpShimeji1" />
