@@ -129,22 +129,13 @@
 
 		<Action Name="Sprawl" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/Jiya_disco_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00011.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00013.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00014.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00015.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/Jiya_disco_00016.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_lie_04.png" ImageAnchor="64,72" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_lie_05.png" ImageAnchor="64,72" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_lie_04.png" ImageAnchor="64,72" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_lie_05.png" ImageAnchor="64,72" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_lie_03.png" ImageAnchor="64,72" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_lie_02.png" ImageAnchor="64,72" Velocity="0,0" Duration="5" />
+				<Pose Image="/Jiya_lie_01.png" ImageAnchor="64,72" Velocity="0,0" Duration="1000" />
 			</Animation>
 		</Action>
 
