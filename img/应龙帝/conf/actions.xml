@@ -189,7 +189,7 @@
 				<Pose Image="/JiyaEm_wing01(24fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing01(24fps)_00011.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing01(24fps)_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-                <Pose Image="/JiyaEm_wing02(8fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -220,7 +220,7 @@
 
         <Action Name="Wings" Type="Stay" BorderType="Floor">
             <Animation>
-                <Pose Image="/JiyaEm_wing02(8fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -239,9 +239,9 @@
 
         <Action Name="TurnHeadend" Type="Move" BorderType="Floor">
             <Animation>
-                <Pose Image="/JiyaEm_turnheadend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-                <Pose Image="/JiyaEm_turnheadend_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-                <Pose Image="/JiyaEm_turnheadend_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_turnheadend_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_turnheadend_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_turnheadend_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -803,7 +803,7 @@
 			</Animation>
 		</Action>
 		<Action Name="PullUpShimeji2" Type="Animate">
-        	<Animation>
+            <Animation>
 				<Pose Image="/JiyaEm_simple_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
