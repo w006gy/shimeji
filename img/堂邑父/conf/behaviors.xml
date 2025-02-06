@@ -19,7 +19,7 @@
 			</NextBehaviorList>
 		</Behavior>
 		
-		<Behavior Name="SitAndSpinHead" Frequency="100" />
+		<!-- <Behavior Name="SitAndSpinHead" Frequency="100" /> -->
 		
 		<!-- ALWAYS REQUIRED -->
 		<Behavior Name="Fall" Frequency="0" Hidden="true" />
@@ -36,13 +36,16 @@
 		<!-- On the Floor -->
 		<Condition Condition="#{mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">
 			<Behavior Name="StandUp" Frequency="200" Hidden="true" />
-			<Behavior Name="SitDown" Frequency="200">
-				<NextBehaviorList Add="true">
+			<Behavior Name="SitDown" Frequency="0">
+				<!-- <NextBehaviorList Add="true">
 					<BehaviorReference Name="SitWhileDanglingLegs" Frequency="100" />
 					<BehaviorReference Name="LieDown" Frequency="100" />
+				</NextBehaviorList> -->
+				<NextBehaviorList Add="false">
+					<BehaviorReference Name="SitDown" Frequency="100" />
 				</NextBehaviorList>
 			</Behavior>
-			<Behavior Name="SitWhileDanglingLegs" Frequency="0" />
+			<Behavior Name="SitWhileDanglingLegs" Frequency="200" Hidden="true" />
 			<Behavior Name="LieDown" Frequency="0">
 				<NextBehaviorList Add="false">
 					<BehaviorReference Name="SitDown" Frequency="100" />
@@ -74,7 +77,7 @@
 		<Condition Condition="#{mascot.environment.floor.isOn(mascot.anchor)}">
 			<Behavior Name="WalkAlongWorkAreaFloor" Frequency="100" Hidden="true" />
 			<Behavior Name="RunAlongWorkAreaFloor" Frequency="100" Hidden="true" />
-			<Behavior Name="CrawlAlongWorkAreaFloor" Frequency="10">
+			<Behavior Name="CrawlAlongWorkAreaFloor" Frequency="10" Hidden="true">
 				<NextBehaviorList Add="false">
 					<!-- Finished Crawling -->
 					<BehaviorReference Name="LieDown" Frequency="1" />

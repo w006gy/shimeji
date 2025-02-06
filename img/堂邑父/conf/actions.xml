@@ -364,11 +364,11 @@
 		</Action>
 
 		<Action Name="SitWhileDanglingLegs" Type="Sequence" Loop="false">
-			<ActionReference Name="SitWithLegsUp" Duration="10" />
-			<ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" />
+			<!-- <ActionReference Name="SitWithLegsUp" Duration="10" /> -->
+			<!-- <ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" /> -->
 			<ActionReference Name="SitAndDangleLegs" Duration="${500+Math.random()*100}" />
-			<ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" />
-			<ActionReference Name="SitWithLegsUp" Duration="10" />
+			<!-- <ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" /> -->
+			<!-- <ActionReference Name="SitWithLegsUp" Duration="10" /> -->
 		</Action>
 
 		<Action Name="HoldOntoWall" Type="Sequence" Loop="false">
