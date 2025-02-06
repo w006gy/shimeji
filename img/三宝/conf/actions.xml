@@ -112,38 +112,7 @@
 			</Animation>
 		</Action>
 
-		<Action Name="SitAndSpinHeadAction" Type="Animate" BorderType="Floor">
-			<Animation>
-				<!-- <Pose Image="/S_jumpdown_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="7"/>
-				<Pose Image="/S_jumpup_01.png" ImageAnchor="64,136" Velocity="2,-2" Duration="3" />
-				<Pose Image="/S_jumpup_02.png" ImageAnchor="64,136" Velocity="2,-2" Duration="3" />
-				<Pose Image="/S_jumpup_03.png" ImageAnchor="64,136" Velocity="2,0" Duration="3"/>
-				<Pose Image="/S_jumpup_04.png" ImageAnchor="64,136" Velocity="2,0" Duration="3" />
-				<Pose Image="/S_jumpdown_02.png" ImageAnchor="64,136" Velocity="2,0" Duration="3"/>
-				<Pose Image="/S_jumpdown_03.png" ImageAnchor="64,136" Velocity="2,0" Duration="3" />
-				<Pose Image="/S_jumpdown_04.png" ImageAnchor="64,136" Velocity="2,2" Duration="3"/>
-				<Pose Image="/S_jumpdown_05.png" ImageAnchor="64,136" Velocity="2,2" Duration="3" />
-				<Pose Image="/S_jumpdown_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="7" />
-				<Pose Image="/S_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="10" /> -->
-				<Pose Image="/S_look_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_09.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_10.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_11.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_12.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_13.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_14.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_15.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-			</Animation>
-		</Action>
-
-		<Action Name="SitWithLegsUp" Type="Stay" BorderType="Floor">
+		<Action Name="UseSpellAction" Type="Animate" BorderType="Floor">
 			<Animation>
 				<Pose Image="/S_look_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/S_look_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
@@ -163,27 +132,7 @@
 			</Animation>
 		</Action>
 
-		<Action Name="SitWithLegsDown" Type="Stay" BorderType="Floor">
-			<Animation>
-				<Pose Image="/S_look_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_09.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_10.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_11.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_12.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_13.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_14.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/S_look_15.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-			</Animation>
-		</Action>
-
-		<Action Name="SitAndDangleLegs" Type="Stay" BorderType="Floor">
+		<Action Name="ReadBookAction" Type="Stay" BorderType="Floor">
 			<Animation>
 				<Pose Image="/S_read_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/S_read_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
@@ -538,12 +487,8 @@
 			<ActionReference Name="Sprawl" Duration="${500+Math.random()*1000}" />
 		</Action>
 
-		<Action Name="SitWhileDanglingLegs" Type="Sequence" Loop="false">
-			<!-- <ActionReference Name="SitWithLegsUp" Duration="10" />
-			<ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" /> -->
-			<ActionReference Name="SitAndDangleLegs" Duration="${500+Math.random()*100}" />
-			<!-- <ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" />
-			<ActionReference Name="SitWithLegsUp" Duration="10" /> -->
+		<Action Name="ReadBook" Type="Sequence" Loop="false">
+			<ActionReference Name="ReadBookAction" Duration="${500+Math.random()*100}" />
 		</Action>
 
 		<Action Name="HoldOntoWall" Type="Sequence" Loop="false">
@@ -865,8 +810,8 @@
 			<ActionReference Name="SitAndLookAtMouse" Duration="${10+Math.random()*10}" />
 			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; mascot.environment.cursor.x}" />
 		</Action>
-		<Action Name="SitAndSpinHead" Type="Sequence" Loop="false">
-			<ActionReference Name="SitAndSpinHeadAction" />
+		<Action Name="UseSpell" Type="Sequence" Loop="false">
+			<ActionReference Name="UseSpellAction" />
 		</Action>
 
 		<Action Name="PullUpShimeji1" Type="Embedded" Class="com.group_finity.mascot.action.Breed"
