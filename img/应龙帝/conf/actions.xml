@@ -175,7 +175,7 @@
 			</Animation>
 		</Action>
 
-		<Action Name="SitWithLegsUp" Type="Stay" BorderType="Floor">
+		<Action Name="WingsUp" Type="Stay" BorderType="Floor">
 			<Animation>
 				<Pose Image="/JiyaEm_wing01(24fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing01(24fps)_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -189,9 +189,15 @@
 				<Pose Image="/JiyaEm_wing01(24fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing01(24fps)_00011.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing01(24fps)_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_wing02(8fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
-
+<!-- 
 		<Action Name="SitWithLegsDown" Type="Stay" BorderType="Floor">
 			<Animation>
 				<Pose Image="/JiyaEm_wing02(8fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -201,9 +207,9 @@
 				<Pose Image="/JiyaEm_wing02(8fps)_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
-		</Action>
+		</Action> -->
 
-		<Action Name="SitAndDangleLegs" Type="Stay" BorderType="Floor">
+		<Action Name="FlapWings" Type="Stay" BorderType="Floor">
 			<Animation>
 				<Pose Image="/JiyaEm_wing02(8fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/JiyaEm_wing02(8fps)_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -211,6 +217,15 @@
 				<Pose Image="/JiyaEm_wing02(8fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
+
+        <Action Name="Wings" Type="Stay" BorderType="Floor">
+            <Animation>
+                <Pose Image="/JiyaEm_wing02(8fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_wing02(8fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+            </Animation>
+        </Action>
 
 		<!-- Laying -->
 
@@ -446,16 +461,16 @@
 			<ActionReference Name="Sit" Duration="${500+Math.random()*1000}" />
 		</Action>
 
-		<Action Name="LieDown" Type="Sequence" Loop="false">
+		<Action Name="TurnHead" Type="Sequence" Loop="false">
 			<ActionReference Name="Sprawl" Duration="10" />
 		</Action>
 
-		<Action Name="SitWhileDanglingLegs" Type="Sequence" Loop="false">
-			<ActionReference Name="SitWithLegsUp" Duration="10" />
-			<ActionReference Name="SitWithLegsDown" Duration="10" />
-			<ActionReference Name="SitAndDangleLegs" Duration="${500+Math.random()*100}" />
+		<Action Name="SpreadWings" Type="Sequence" Loop="false">
+			<ActionReference Name="WingsUp" Duration="10" />
+			<!-- <ActionReference Name="SitWithLegsDown" Duration="10" /> -->
+			<ActionReference Name="FlapWings" Duration="${500+Math.random()*100}" />
 			<!-- <ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" />
-			<ActionReference Name="SitWithLegsUp" Duration="10" /> -->
+			<ActionReference Name="WingsUp" Duration="10" /> -->
 		</Action>
 
 		<Action Name="HoldOntoWall" Type="Sequence" Loop="false">
