@@ -7,16 +7,18 @@
 		<!-- ALWAYS REQUIRED -->
 		<Behavior Name="ChaseMouse" Frequency="0" Hidden="true">
 			<NextBehaviorList Add="false">
-				<BehaviorReference Name="SitAndFaceMouse" Frequency="1" />
+				<!-- <BehaviorReference Name="SitAndFaceMouse" Frequency="1" /> -->
+				<BehaviorReference Name="Walk" Frequency="1" />
 			</NextBehaviorList>
 		</Behavior>
-<!-- 		
-		<Behavior Name="SitAndFaceMouse" Frequency="0">
+		
+		<!-- <Behavior Name="SitAndFaceMouse" Frequency="0">
 			<NextBehaviorList Add="false">
-				<BehaviorReference Name="SitAndFaceMouse" Frequency="60" />
-				<BehaviorReference Name="SitAndSpinHead" Frequency="20" />
-				<BehaviorReference Name="SpreadWings" Frequency="20" />
-			</NextBehaviorList>
+				<BehaviorReference Name="SitAndFaceMouse" Frequency="70" />
+				<BehaviorReference Name="Walk" Frequency="30" /> -->
+				<!-- <BehaviorReference Name="SitAndSpinHead" Frequency="30" /> -->
+				<!-- <BehaviorReference Name="SpreadWings" Frequency="20" /> -->
+			<!-- </NextBehaviorList>
 		</Behavior> -->
 		
 		<!-- <Behavior Name="SitAndSpinHead" Frequency="100" /> -->

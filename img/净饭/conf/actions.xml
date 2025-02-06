@@ -103,7 +103,7 @@
 			</Animation>
 		</Action>
 
-		<Action Name="SitAndSpinHeadAction" Type="Animate" BorderType="Floor">
+		<Action Name="PunchAction" Type="Animate" BorderType="Floor">
 			<Animation>
 				<Pose Image="/J_punch_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_punch_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
@@ -116,7 +116,7 @@
 			</Animation>
 		</Action>
 
-		<Action Name="SitWithLegsUp" Type="Stay" BorderType="Floor">
+		<!-- <Action Name="SitWithLegsUp" Type="Stay" BorderType="Floor">
 			<Animation>
 				<Pose Image="/J_punch_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_punch_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
@@ -140,9 +140,9 @@
 				<Pose Image="/J_punch_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_punch_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 			</Animation>
-		</Action>
+		</Action> -->
 
-		<Action Name="SitAndDangleLegs" Type="Stay" BorderType="Floor">
+		<!-- <Action Name="SitAndDangleLegs" Type="Stay" BorderType="Floor">
 			<Animation>
 				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -153,7 +153,7 @@
 				<Pose Image="/J_idle_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/J_idle_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
-		</Action>
+		</Action> -->
 
 		<!-- Laying -->
 
@@ -402,13 +402,17 @@
 			<ActionReference Name="Sprawl" Duration="${500+Math.random()*1000}" />
 		</Action>
 
-		<Action Name="SitWhileDanglingLegs" Type="Sequence" Loop="false">
+		<Action Name="AlwaysLieDown" Type="Sequence" Loop="false">
+			<ActionReference Name="Sprawl" Duration="1000" />
+		</Action>
+
+		<!-- <Action Name="SitWhileDanglingLegs" Type="Sequence" Loop="false"> -->
 			<!-- <ActionReference Name="SitWithLegsUp" Duration="10" />
 			<ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" /> -->
-			<ActionReference Name="SitAndDangleLegs" Duration="${500+Math.random()*100}" />
+			<!-- <ActionReference Name="SitAndDangleLegs" Duration="${500+Math.random()*100}" /> -->
 			<!-- <ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" />
 			<ActionReference Name="SitWithLegsUp" Duration="10" /> -->
-		</Action>
+		<!-- </Action> -->
 
 		<Action Name="HoldOntoWall" Type="Sequence" Loop="false">
 			<ActionReference Name="GrabWall" Duration="${500+Math.random()*1000}" />
@@ -729,8 +733,8 @@
 			<ActionReference Name="SitAndLookAtMouse" Duration="${10+Math.random()*10}" />
 			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; mascot.environment.cursor.x}" />
 		</Action>
-		<Action Name="SitAndSpinHead" Type="Sequence" Loop="false">
-			<ActionReference Name="SitAndSpinHeadAction" />
+		<Action Name="Punch" Type="Sequence" Loop="false">
+			<ActionReference Name="PunchAction" />
 		</Action>
 
 		<Action Name="PullUpShimeji1" Type="Embedded" Class="com.group_finity.mascot.action.Breed"
