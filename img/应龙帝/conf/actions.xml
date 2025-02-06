@@ -96,55 +96,27 @@
 		</Action>
 		<Action Name="SitAndLookUp" Type="Stay" BorderType="Floor">
 			<Animation Condition="#{mascot.environment.cursor.y &lt; mascot.environment.screen.height/2}">
-				<Pose Image="/JiyaEm_wing01(24fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00011.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="16" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
 
 		<Action Name="SitAndLookAtMouse" Type="Stay" BorderType="Floor">
 			<Animation>
-				<Pose Image="/JiyaEm_wing01(24fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00011.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing01(24fps)_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="16" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_wing02(8fps)_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_simple_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
 
