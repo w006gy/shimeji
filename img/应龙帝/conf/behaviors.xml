@@ -44,11 +44,16 @@
 			</Behavior>
 			<Behavior Name="SitWhileDanglingLegs" Frequency="0" />
 			<Behavior Name="LieDown" Frequency="0">
-				<NextBehaviorList Add="true">
+				<NextBehaviorList Add="false">
 					<BehaviorReference Name="TurnHeadend" Frequency="100" />
 					<!-- <BehaviorReference Name="SitDown" Frequency="100" />
 					<BehaviorReference Name="CrawlAlongIECeiling" Frequency="100" Condition="${mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}" Hidden="true" />
 					<BehaviorReference Name="CrawlAlongWorkAreaFloor" Frequency="100" Condition="${mascot.environment.floor.isOn(mascot.anchor)}" /> -->
+				</NextBehaviorList>
+			</Behavior>
+			<Behavior Name="TurnHeadend" Frequency="0" Hidden="true">
+				<NextBehaviorList Add="false">
+					<BehaviorReference Name="TurnHeadend" Frequency="100" />
 				</NextBehaviorList>
 			</Behavior>
 			
