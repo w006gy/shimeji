@@ -11,13 +11,13 @@
 			</NextBehaviorList>
 		</Behavior>
 		
-		<!-- <Behavior Name="SitAndFaceMouse" Frequency="0">
+		<Behavior Name="SitAndFaceMouse" Frequency="0">
 			<NextBehaviorList Add="false">
-				<BehaviorReference Name="SitAndFaceMouse" Frequency="60" />
-				<BehaviorReference Name="UseSpell" Frequency="20" />
-				<BehaviorReference Name="ReadBook" Frequency="20" />
+				<BehaviorReference Name="SitAndFaceMouse" Frequency="70" />
+				<BehaviorReference Name="UseSpell" Frequency="30" />
+				<!-- <BehaviorReference Name="ReadBook" Frequency="20" /> -->
 			</NextBehaviorList>
-		</Behavior> -->
+		</Behavior>
 		
 		<Behavior Name="UseSpell" Frequency="100" />
 		
