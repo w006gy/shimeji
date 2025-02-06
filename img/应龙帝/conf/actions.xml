@@ -359,7 +359,7 @@
 		</Action>
 
 		<Action Name="Falling" Type="Embedded" Class="com.group_finity.mascot.action.Fall"
-			RegistanceX="0.05" RegistanceY="0.1" Gravity="2">
+			RegistanceX="0.05" RegistanceY="0.1" Gravity="1.2">
 			<Animation>
 				<Pose Image="/JiyaEm_wing02(8fps)_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="250" />
 			</Animation>
