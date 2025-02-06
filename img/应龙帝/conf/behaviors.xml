@@ -43,13 +43,14 @@
 				</NextBehaviorList>
 			</Behavior>
 			<Behavior Name="SitWhileDanglingLegs" Frequency="0" />
-			<!-- <Behavior Name="LieDown" Frequency="0">
-				<NextBehaviorList Add="false">
-					<BehaviorReference Name="SitDown" Frequency="100" />
+			<Behavior Name="LieDown" Frequency="0">
+				<NextBehaviorList Add="true">
+					<BehaviorReference Name="TurnHeadend" Frequency="100" />
+					<!-- <BehaviorReference Name="SitDown" Frequency="100" />
 					<BehaviorReference Name="CrawlAlongIECeiling" Frequency="100" Condition="${mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}" Hidden="true" />
-					<BehaviorReference Name="CrawlAlongWorkAreaFloor" Frequency="100" Condition="${mascot.environment.floor.isOn(mascot.anchor)}" />
+					<BehaviorReference Name="CrawlAlongWorkAreaFloor" Frequency="100" Condition="${mascot.environment.floor.isOn(mascot.anchor)}" /> -->
 				</NextBehaviorList>
-			</Behavior> -->
+			</Behavior>
 			
 			<Behavior Name="SplitIntoTwo" Frequency="50" Condition="#{mascot.totalCount &lt; 10}" />
 		</Condition>
@@ -91,7 +92,7 @@
 			<!-- <Behavior Name="JumpFromBottomOfIE" Frequency="50" Condition="#{mascot.anchor.x &gt;= mascot.environment.activeIE.left &amp;&amp;
 				mascot.anchor.x &lt; mascot.environment.activeIE.right}" /> -->
 				
-			<!-- <Behavior Name="PullUpShimeji" Frequency="50" Condition="#{mascot.totalCount &lt; 10}" /> -->
+			<Behavior Name="PullUpShimeji" Frequency="50" Condition="#{mascot.totalCount &lt; 10}" />
 		</Condition>
 		
 		<!-- On Work Area Facing the Wall -->

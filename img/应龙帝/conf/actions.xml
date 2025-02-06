@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Mascot xmlns="http://www.group-finity.com/Mascot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.group-finity.com/Mascot Mascot.xsd">
 
@@ -216,16 +216,48 @@
 
 		<Action Name="Sprawl" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/JiyaEm_simple_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_simple_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_simple_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_simple_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_simple_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_simple_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_simple_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/JiyaEm_simple_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnhead_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnhead_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnhead_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
+
+        <Action Name="TurnHeadend" Type="Stay" BorderType="Floor" Loop="true">
+            <Animation>
+                <Pose Image="/JiyaEm_turnheadend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+                <Pose Image="/JiyaEm_turnheadend_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/JiyaEm_turnheadend_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+            </Animation>
+        </Action>
 
 		<Action Name="Creep" Type="Move" BorderType="Floor">
 			<Animation>
@@ -444,7 +476,7 @@
 
 		<Action Name="SitWhileDanglingLegs" Type="Sequence" Loop="false">
 			<ActionReference Name="SitWithLegsUp" Duration="10" />
-			<ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" />
+			<ActionReference Name="SitWithLegsDown" Duration="10" />
 			<ActionReference Name="SitAndDangleLegs" Duration="${500+Math.random()*100}" />
 			<!-- <ActionReference Name="SitWithLegsDown" Duration="${100+Math.random()*100}" />
 			<ActionReference Name="SitWithLegsUp" Duration="10" /> -->
@@ -780,7 +812,9 @@
 			</Animation>
 		</Action>
 		<Action Name="PullUpShimeji2" Type="Animate">
-			<ActionReference Name="Look" />
+        	<Animation>
+				<Pose Image="/JiyaEm_simple_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+			</Animation>
 		</Action>
 		<Action Name="PullUpShimeji" Type="Sequence">
 			<ActionReference Name="PullUpShimeji1" />
