@@ -149,6 +149,12 @@
 			</Animation>
 		</Action>
 
+		<!-- <Action Name="Lie" Type="Animate" BorderType="Floor">
+			<Animation>
+				<Pose Image="/M_lie_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="100" />
+			</Animation>
+		</Action> -->
+
 		<Action Name="Creep" Type="Move" BorderType="Floor">
 			<Animation>
 				<Pose Image="/M_walk_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
@@ -161,16 +167,16 @@
 				<Pose Image="/M_walk_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 			</Animation>
 		</Action>
-		<Action Name="Wheel" Type="Animate" BorderType="Floor">
+		<Action Name="Wheel" Type="Stay" BorderType="Floor">
 			<Animation>
-				<Pose Image="/M_slip_01.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
-				<Pose Image="/M_slip_02.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
-				<Pose Image="/M_slip_03.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
-				<Pose Image="/M_slip_04.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
-				<Pose Image="/M_slip_05.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
-				<Pose Image="/M_slip_06.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
-				<Pose Image="/M_slip_07.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
-				<Pose Image="/M_slip_08.png" ImageAnchor="64,175" Velocity="-5,0" Duration="4" />
+				<Pose Image="/M_slip_01.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
+				<Pose Image="/M_slip_02.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
+				<Pose Image="/M_slip_03.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
+				<Pose Image="/M_slip_04.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
+				<Pose Image="/M_slip_05.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
+				<Pose Image="/M_slip_06.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
+				<Pose Image="/M_slip_07.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
+				<Pose Image="/M_slip_08.png" ImageAnchor="64,175" Velocity="-10,0" Duration="4" />
 			</Animation>
 		</Action>
 
@@ -351,7 +357,7 @@
 					<!-- <ActionReference Name="Bouncing"/> -->
 					<!-- <ActionReference Name="Stand" Duration="${100+Math.random()*100}" /> -->
 					<ActionReference Name="Wheel" Duration="${50+Math.random()*50}" />
-					<ActionReference Name="Sprawl" Duration="20}" />
+					<ActionReference Name="Sprawl" Duration="200" />
 				</Action>
 				<ActionReference Name="GrabWall" Duration="100" />
 			</Action>
@@ -369,7 +375,7 @@
 			<Action Type="Select">
 				<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
 					<ActionReference Name="Wheel" Duration="${50+Math.random()*50}" />
-					<ActionReference Name="Sprawl" Duration="20}" />
+					<ActionReference Name="Sprawl" Duration="200" />
 				</Action>
 				<ActionReference Name="GrabWall" Duration="100" />
 			</Action>
@@ -384,12 +390,13 @@
 		</Action>
 
 		<Action Name="LieDown" Type="Sequence" Loop="false">
-			<ActionReference Name="Sprawl" Duration="${500+Math.random()*1000}" />
+			<!-- <ActionReference Name="Sprawl" Duration="${500+Math.random()*1000}" /> -->
+			 <ActionReference Name="Sprawl" Duration="100" />
 		</Action>
 
 		<Action Name="GoWheel" Type="Sequence" Loop="false">
-			<ActionReference Name="Wheel" Duration="${50+Math.random()*50}" />
-			<ActionReference Name="Sprawl" Duration="20}" />
+			<ActionReference Name="Wheel" Duration="${100+Math.random()*200}" />
+			<ActionReference Name="Sprawl" Duration="100" />
 		</Action>
 
 		<!-- <Action Name="SitWhileDanglingLegs" Type="Sequence" Loop="false"> -->
