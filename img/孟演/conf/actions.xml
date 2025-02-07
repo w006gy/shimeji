@@ -350,13 +350,13 @@
 
 		<!-- ALWAYS REQUIRED -->
 		<Action Name="Fall" Type="Sequence" Loop="false">
-			<ActionReference Name="Falling"/>
+			<ActionReference Name="RealFalling"/>
 			<Action Type="Select">
 				<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) ||
 					mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
 					<!-- <ActionReference Name="Bouncing"/> -->
 					<!-- <ActionReference Name="Stand" Duration="${100+Math.random()*100}" /> -->
-					<ActionReference Name="Wheel" Duration="${50+Math.random()*50}" />
+					<ActionReference Name="Wheel" Duration="${20+Math.random()*80}" />
 					<ActionReference Name="Sprawl" Duration="200" />
 				</Action>
 				<ActionReference Name="GrabWall" Duration="100" />
@@ -371,7 +371,7 @@
 
 		<!-- ALWAYS REQUIRED -->
 		<Action Name="Thrown" Type="Sequence" Loop="false">
-			<ActionReference Name="Falling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}"/>
+			<ActionReference Name="RealFalling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}"/>
 			<Action Type="Select">
 				<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
 					<ActionReference Name="Wheel" Duration="${50+Math.random()*50}" />
@@ -395,7 +395,7 @@
 		</Action>
 
 		<Action Name="GoWheel" Type="Sequence" Loop="false">
-			<ActionReference Name="Wheel" Duration="${100+Math.random()*200}" />
+			<ActionReference Name="Wheel" Duration="${100+Math.random()*100}" />
 			<ActionReference Name="Sprawl" Duration="100" />
 		</Action>
 
@@ -537,14 +537,14 @@
 		<Action Name="JumpFromLeftEdgeOfIE" Type="Sequence" Loop="false">
 			<ActionReference Name="Walk" TargetX="${mascot.environment.activeIE.left+Math.random()*50}" />
 			<ActionReference Name="Stand" Duration="${50+Math.random()*50}" />
-			<ActionReference Name="Falling" InitialVX="${-15-Math.random()*5}" InitialVY="${-20-Math.random()*5}"/>
+			<ActionReference Name="RealFalling" InitialVX="${-15-Math.random()*5}" InitialVY="${-20-Math.random()*5}"/>
 			<!-- <ActionReference Name="Bouncing" /> -->
 		</Action>
 
 		<Action Name="JumpFromRightEdgeOfIE" Type="Sequence" Loop="false">
 			<ActionReference Name="Walk" TargetX="${mascot.environment.activeIE.right-Math.random()*50}" />
 			<ActionReference Name="Stand" Duration="${50+Math.random()*50}" />
-			<ActionReference Name="Falling" InitialVX="${15+Math.random()*5}" InitialVY="${-20-Math.random()*5}"/>
+			<ActionReference Name="RealFalling" InitialVX="${15+Math.random()*5}" InitialVY="${-20-Math.random()*5}"/>
 			<!-- <ActionReference Name="Bouncing" /> -->
 		</Action>
 
@@ -672,17 +672,17 @@
 		<Action Name="ChaseMouse" Type="Sequence" Loop="false">
 			<Action Type="Sequence" Condition="${mascot.environment.ceiling.isOn(mascot.anchor) || mascot.environment.activeIE.bottomBorder.isOn(mascot.anchor)}">
 				<ActionReference Name="Offset" Y="1" />
-				<ActionReference Name="Falling"/>
+				<ActionReference Name="RealFalling"/>
 				<!-- <ActionReference Name="Bouncing" /> -->
 			</Action>
 			<Action Type="Sequence" Condition="${mascot.environment.workArea.leftBorder.isOn(mascot.anchor) || mascot.environment.activeIE.rightBorder.isOn(mascot.anchor)}">
 				<ActionReference Name="Offset" X="1" />
-				<ActionReference Name="Falling"/>
+				<ActionReference Name="RealFalling"/>
 				<!-- <ActionReference Name="Bouncing" /> -->
 			</Action>
 			<Action Type="Sequence" Condition="${mascot.environment.workArea.rightBorder.isOn(mascot.anchor) || mascot.environment.activeIE.leftBorder.isOn(mascot.anchor)}">
 				<ActionReference Name="Offset" X="-1" />
-				<ActionReference Name="Falling"/>
+				<ActionReference Name="RealFalling"/>
 				<!-- <ActionReference Name="Bouncing" /> -->
 			</Action>
 			<Action Type="Select">
