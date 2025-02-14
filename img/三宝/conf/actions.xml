@@ -63,6 +63,74 @@
 			</Animation>
 		</Action>
 
+		<!-- 交互动作 -->
+		<Action Name="BePickedAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor" Behavior="LieDown">
+			<Animation>
+				<!-- <Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="0,0" Duration="7" />
+				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
+				<Pose Image="/S_run_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
+				<Pose Image="/S_run_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
+				<Pose Image="/S_run_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
+				<Pose Image="/S_run_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
+				<Pose Image="/S_run_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
+				<Pose Image="/S_run_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" /> -->
+				<!-- <Pose Velocity="0,0" Duration="8" />
+				<Pose Velocity="0,0" Duration="8" />
+				<Pose Velocity="0,0" Duration="2" /> -->
+				<Pose Image="/S_faint_16.png" ImageAnchor="64,136" Velocity="0,0" Duration="16" />
+				<!-- <Pose Velocity="0,0" Duration="16" /> -->
+				<Pose Velocity="0,0" Duration="80" />
+				<!-- <Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" /> -->
+				<Pose Velocity="0,0" Duration="32" />
+				<!-- <Pose Velocity="-40,0" Duration="1" /> -->
+			</Animation>
+		</Action>
+
+		<Action Name="BePicked" Type="Sequence">
+			<ActionReference Name="BePickedAction" />
+			<ActionReference Name="Sprawl" />
+		</Action>
+
+		<Action Name="FaintWait" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" Affordance="Cuddle" BorderType="Floor">
+			<Animation>
+				<Pose Image="/S_faint_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_09.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_10.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_11.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_12.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_13.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_14.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_15.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_16.png" ImageAnchor="64,136" Velocity="0,0" Duration="2000" />
+			</Animation>
+		</Action>
+
+		<Action Name="BroadcastFaintWait" Type="Sequence">
+			<ActionReference Name="FaintWait" />
+		</Action>
+
 		<!-- Sitting -->
 
 		<Action Name="Sit" Type="Stay" BorderType="Floor">
@@ -331,7 +399,7 @@
 
 		<Action Name="Tripping" Type="Animate" BorderType="Floor">
 			<Animation>
-								<Pose Image="/S_faint_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
+				<Pose Image="/S_faint_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
 				<Pose Image="/S_faint_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
 				<Pose Image="/S_faint_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
 				<Pose Image="/S_faint_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />

@@ -33,6 +33,7 @@
 		<Behavior Name="PullUp" Frequency="0" Hidden="true" />
 		<Behavior Name="Divided" Frequency="0" Hidden="true" />
 
+
 		<!-- On the Floor -->
 		<Condition Condition="#{mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">
 			<Behavior Name="StandUp" Frequency="200" Hidden="true" />
@@ -109,6 +110,9 @@
 		<Condition Condition="#{mascot.environment.ceiling.isOn(mascot.anchor)}">
 			<Behavior Name="ClimbAlongCeiling" Frequency="100" />
 		</Condition>
+
+		<Behavior Name="BePicked" Frequency="0" Hidden="true" />
+		<Behavior Name="BroadcastFaintWait" Frequency="1200" />
 		
 		<!-- On Top of IE -->
 		<Condition Condition="#{mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">
