@@ -23,7 +23,6 @@
 
 		<Action Name="Walk" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/J_run_00.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
@@ -37,7 +36,6 @@
 
 		<Action Name="Run" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/J_run_00.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
@@ -51,7 +49,6 @@
 
 		<Action Name="Dash" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/J_run_00.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
 				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
 				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
 				<Pose Image="/J_run_03.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
@@ -62,6 +59,132 @@
 				<Pose Image="/J_run_08.png" ImageAnchor="64,136" Velocity="-7,0" Duration="2" />
 			</Animation>
 		</Action>
+		
+		<!-- 交互动作 -->
+		<Action Name="PunchInteractAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<Pose Image="/J_punch_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_punch_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_punch_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_punch_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_punch_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_punch_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_punch_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_punch_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+			</Animation>
+		</Action>
+
+		<Action Name="PunchInteract" Type="Sequence">
+			<ActionReference Name="PunchInteractAction" />
+		</Action>
+
+		<Action Name="BePunchedAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor">
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01a.png" ImageAnchor="64,142" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01b.png" ImageAnchor="64,150" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01c.png" ImageAnchor="64,160" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01b.png" ImageAnchor="64,150" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01a.png" ImageAnchor="64,142" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+<!-- 
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" /> -->
+			</Animation>
+		</Action>
+
+		<Action Name="BePunched" Type="Sequence">
+			<ActionReference Name="BePunchedAction" />
+			<ActionReference Name="GetUp" Duration="27" />
+		</Action>
+
+		<Action Name="PunchWait" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" Affordance="HitDown" BorderType="Floor">
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/J_idle_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="2000" />
+			</Animation>
+		</Action>
+
+		<Action Name="BroadcastPunchWait" Type="Sequence">
+			<ActionReference Name="PunchWait" />
+			<!-- <ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" /> -->
+		</Action>
+
+		<Action Name="RunAndBeHit" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="BePunched" TargetBehavior="PunchInteract" BorderType="Floor">
+			<Animation>
+				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/J_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/J_run_04.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/J_run_05.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/J_run_06.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/J_run_07.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/J_run_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+			</Animation>
+		</Action>
+
+		<!-- <Action Name="RunAndHit" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDefend" Behavior="PunchInteractAction" TargetBehavior="Defend" BorderType="Floor">
+			<Animation>
+				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_03.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_04.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_05.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_06.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_07.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_08.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+			</Animation>
+		</Action> -->
+
+		<Action Name="HuntBePunch" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<!-- a small delay is needed to prevent an infinite loop -->
+			<ActionReference Name="RunAndBeHit" />
+		</Action>
+
+		<!-- <Action Name="HuntPunch" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<ActionReference Name="RunAndHit" />
+		</Action> -->
 
 		<!-- Sitting -->
 
@@ -165,7 +288,6 @@
 
 		<Action Name="Creep" Type="Move" BorderType="Floor">
 			<Animation>
-				<Pose Image="/J_run_00.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="4" />
@@ -194,7 +316,6 @@
 		
 		<Action Name="ClimbCeiling" Type="Move" BorderType="Ceiling">
 			<Animation>
-				<Pose Image="/J_run_00r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_01r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_02r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
 				<Pose Image="/J_run_03r.png" ImageAnchor="64,12" Velocity="-3,0" Duration="4" />
@@ -222,7 +343,6 @@
 		</Action>
 		<Action Name="ClimbWall" Type="Move" BorderType="Wall">
 			<Animation Condition="#{TargetY &lt; mascot.anchor.y}">
-				<Pose Image="/J_run_00c.png" ImageAnchor="12,136" Velocity="0,-3" Duration="4" />
 				<Pose Image="/J_run_01c.png" ImageAnchor="12,136" Velocity="0,-3" Duration="4" />
 				<Pose Image="/J_run_02c.png" ImageAnchor="12,136" Velocity="0,-3" Duration="4" />
 				<Pose Image="/J_run_03c.png" ImageAnchor="12,136" Velocity="0,-3" Duration="4" />
@@ -234,7 +354,6 @@
 			</Animation>
 
 			<Animation Condition="#{TargetY &gt;= mascot.anchor.y}">
-				<Pose Image="/J_run_00f.png" ImageAnchor="12,136" Velocity="0,3" Duration="4" />
 				<Pose Image="/J_run_01f.png" ImageAnchor="12,136" Velocity="0,3" Duration="4" />
 				<Pose Image="/J_run_02f.png" ImageAnchor="12,136" Velocity="0,3" Duration="4" />
 				<Pose Image="/J_run_03f.png" ImageAnchor="12,136" Velocity="0,3" Duration="4" />
@@ -388,6 +507,10 @@
 				</Action>
 				<ActionReference Name="GrabWall" Duration="100" />
 			</Action>
+		</Action>
+
+		<Action Name="GetUp" Type="Sequence" Loop="false">
+			<ActionReference Name="Bouncing"/>
 		</Action>
 
 		<Action Name="StandUp" Type="Sequence" Loop="false">
