@@ -122,75 +122,6 @@
 			<Animation>
 				<Pose Image="/M_run_11.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
 				<Pose Image="/M_run_10.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
-								<!-- <Pose Image="/M_run_11.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/M_run_10.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
-								<Pose Image="/M_run_11.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/M_run_10.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
-								<Pose Image="/M_run_11.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/M_run_10.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" /> -->
-				<!-- <Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_02.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_03.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_04.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_05.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_06.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_07.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_02.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_03.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_04.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_05.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_06.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_07.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
-				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" /> -->
-
-<!-- 
-				<Pose Image="/MS_shoulder_01.png" ImageAnchor="69,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_02.png" ImageAnchor="74,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_03.png" ImageAnchor="79,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_04.png" ImageAnchor="84,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_05.png" ImageAnchor="89,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_06.png" ImageAnchor="94,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_07.png" ImageAnchor="99,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_08.png" ImageAnchor="104,136" Velocity="0,0" Duration="8" /> -->
-
-				<!-- <Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" /> -->
-
-
-				<!-- <Pose Image="/MS_shoulder_01.png" ImageAnchor="146,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_02.png" ImageAnchor="156,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_03.png" ImageAnchor="166,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_04.png" ImageAnchor="176,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_05.png" ImageAnchor="186,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_06.png" ImageAnchor="196,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_07.png" ImageAnchor="206,136" Velocity="0,0" Duration="8" />
-				<Pose Image="/MS_shoulder_08.png" ImageAnchor="216,136" Velocity="0,0" Duration="8" /> -->
-
-
-				<!-- <Pose Image="/MS_putdown_01.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
-				<Pose Image="/MS_putdown_02.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
-				<Pose Image="/MS_putdown_03.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
-				<Pose Image="/MS_putdown_04.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
-				<Pose Image="/MS_putdown_05.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
-				<Pose Image="/MS_putdown_06.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
-				<Pose Image="/MS_putdown_07.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
-				<Pose Image="/MS_putdown_08.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" /> -->
 			</Animation>
 		</Action>
 
@@ -252,14 +183,6 @@
 		<Action Name="HuntSanBao" Type="Sequence">
 			<ActionReference Name="Stand" Duration="5" /> 
 			<!-- a small delay is needed to prevent an infinite loop -->
-			<!-- <ActionReference Name="RunAffordance" />
-			<ActionReference Name="RunAffordance" />
-			<ActionReference Name="RunAffordance" />
-			<ActionReference Name="RunAffordance" />
-			<ActionReference Name="RunAffordance" />
-			<ActionReference Name="RunAffordance" />
-			<ActionReference Name="RunAffordance" /> -->
-			<!-- <ActionReference Name="RunAffordance" Duration="18"/> -->
 			<ActionReference Name="RunAffordance" />
 		</Action>
 
