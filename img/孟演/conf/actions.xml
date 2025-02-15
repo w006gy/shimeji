@@ -225,14 +225,14 @@
 
 		<Action Name="RunAffordance" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="Cuddle" Behavior="PickSanBao" TargetBehavior="BePicked" BorderType="Floor">
 			<Animation>
-				<Pose Image="/M_run_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
-				<Pose Image="/M_run_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
-				<Pose Image="/M_run_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
-				<Pose Image="/M_run_04.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
-				<Pose Image="/M_run_05.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
-				<Pose Image="/M_run_06.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
-				<Pose Image="/M_run_07.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
-				<Pose Image="/M_run_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/M_run_01.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/M_run_02.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/M_run_03.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/M_run_04.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/M_run_05.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/M_run_06.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/M_run_07.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/M_run_08.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
 			</Animation>
 		</Action>
 
@@ -250,7 +250,7 @@
 		</Action>
 
 		<Action Name="HuntSanBao" Type="Sequence">
-			<ActionReference Name="Run2" Duration="18" /> 
+			<ActionReference Name="Stand" Duration="5" /> 
 			<!-- a small delay is needed to prevent an infinite loop -->
 			<!-- <ActionReference Name="RunAffordance" />
 			<ActionReference Name="RunAffordance" />
