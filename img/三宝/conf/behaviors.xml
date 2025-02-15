@@ -113,6 +113,7 @@
 
 		<Behavior Name="BePicked" Frequency="0" Hidden="true" />
 		<Behavior Name="BroadcastFaintWait" Frequency="1200" />
+		<Behavior Name="BlankSleep" Frequency="0" Hidden="true" />
 		
 		<!-- On Top of IE -->
 		<Condition Condition="#{mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">

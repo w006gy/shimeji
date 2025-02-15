@@ -112,6 +112,10 @@
 		<Action Name="PickSanBao" Type="Sequence">
 			<!-- <ActionReference Name="PickSanBaoAction" /> -->
 			<ActionReference Name="ActionWithSanBao" />
+			<!-- {TargetY &lt; mascot.anchor.y} -->
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="MoveSanBao" Duration="160" />
+			<!-- TargetX="${(mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}"  -->
 		</Action>
 
 		<Action Name="ActionWithSanBao" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor">
@@ -151,7 +155,7 @@
 				<Pose Image="/MS_shoulder_07.png" ImageAnchor="99,136" Velocity="0,0" Duration="8" />
 				<Pose Image="/MS_shoulder_08.png" ImageAnchor="104,136" Velocity="0,0" Duration="8" /> -->
 
-				<Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<!-- <Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/MS_shoulder_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/MS_shoulder_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/MS_shoulder_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
@@ -166,7 +170,7 @@
 				<Pose Image="/MS_shoulder_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/MS_shoulder_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
 				<Pose Image="/MS_shoulder_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
-				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" /> -->
 
 
 				<!-- <Pose Image="/MS_shoulder_01.png" ImageAnchor="146,136" Velocity="0,0" Duration="8" />
@@ -177,6 +181,37 @@
 				<Pose Image="/MS_shoulder_06.png" ImageAnchor="196,136" Velocity="0,0" Duration="8" />
 				<Pose Image="/MS_shoulder_07.png" ImageAnchor="206,136" Velocity="0,0" Duration="8" />
 				<Pose Image="/MS_shoulder_08.png" ImageAnchor="216,136" Velocity="0,0" Duration="8" /> -->
+
+
+				<!-- <Pose Image="/MS_putdown_01.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
+				<Pose Image="/MS_putdown_02.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
+				<Pose Image="/MS_putdown_03.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
+				<Pose Image="/MS_putdown_04.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
+				<Pose Image="/MS_putdown_05.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
+				<Pose Image="/MS_putdown_06.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
+				<Pose Image="/MS_putdown_07.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
+				<Pose Image="/MS_putdown_08.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" /> -->
+			</Animation>
+		</Action>
+
+		<Action Name="MoveSanBao" Type="Move" BorderType="Floor">
+			<Animation>
+				<Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_02.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_03.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_04.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_05.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_06.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_07.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_01.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_02.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_03.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_04.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_05.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_06.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_07.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
+				<Pose Image="/MS_shoulder_08.png" ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
 				<Pose Image="/MS_putdown_01.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
 				<Pose Image="/MS_putdown_02.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />
 				<Pose Image="/MS_putdown_03.png" ImageAnchor="64,100" Velocity="0,0" Duration="4" />

@@ -64,7 +64,7 @@
 		</Action>
 
 		<!-- 交互动作 -->
-		<Action Name="BePickedAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor" Behavior="LieDown">
+		<Action Name="BePickedAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor" Behavior="BlankSleep">
 			<Animation>
 				<!-- <Pose Image="/S_run_00.png" ImageAnchor="64,136" Velocity="0,0" Duration="7" />
 				<Pose Image="/S_run_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="8" />
@@ -79,7 +79,7 @@
 				<Pose Velocity="0,0" Duration="2" /> -->
 				<Pose Image="/S_faint_16.png" ImageAnchor="64,136" Velocity="0,0" Duration="16" />
 				<!-- <Pose Velocity="0,0" Duration="16" /> -->
-				<Pose Velocity="0,0" Duration="80" />
+				<!-- <Pose Velocity="0,0" Duration="80" /> -->
 				<!-- <Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
 				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
 				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
@@ -96,13 +96,27 @@
 				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
 				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" />
 				<Pose ImageAnchor="64,136" Velocity="-2,0" Duration="8" /> -->
-				<Pose Velocity="0,0" Duration="32" />
+				<!-- <Pose Velocity="0,0" Duration="32" /> -->
 				<!-- <Pose Velocity="-40,0" Duration="1" /> -->
+			</Animation>
+		</Action>
+
+		<Action Name="Blank" Type="Move" BorderType="Floor">
+			<Animation>
+				<Pose Velocity="-2,0" Duration="128" />
+				<Pose Velocity="0,0" Duration="32" />
 			</Animation>
 		</Action>
 
 		<Action Name="BePicked" Type="Sequence">
 			<ActionReference Name="BePickedAction" />
+			<ActionReference Name="Blank" />
+			<ActionReference Name="Sprawl" />
+		</Action>
+
+		<Action Name="BlankSleep" Type="Sequence" Loop="false">
+		<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="Blank" Duration="160"/>
 			<ActionReference Name="Sprawl" />
 		</Action>
 
