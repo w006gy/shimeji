@@ -125,13 +125,12 @@
 				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/J_idle_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/J_idle_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
-				<Pose Image="/J_idle_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="2000" />
+				<Pose Image="/J_idle_08.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
 		</Action>
 
 		<Action Name="BroadcastPunchWait" Type="Sequence">
 			<ActionReference Name="PunchWait" />
-			<!-- <ActionReference Name="PunchWait" />
 			<ActionReference Name="PunchWait" />
 			<ActionReference Name="PunchWait" />
 			<ActionReference Name="PunchWait" />
@@ -146,7 +145,8 @@
 			<ActionReference Name="PunchWait" />
 			<ActionReference Name="PunchWait" />
 			<ActionReference Name="PunchWait" />
-			<ActionReference Name="PunchWait" /> -->
+			<ActionReference Name="PunchWait" />
+			<ActionReference Name="PunchWait" />
 		</Action>
 
 		<Action Name="RunAndBeHit" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="BePunched" TargetBehavior="PunchInteract" BorderType="Floor">
@@ -162,7 +162,7 @@
 			</Animation>
 		</Action>
 
-		<!-- <Action Name="RunAndHit" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDefend" Behavior="PunchInteractAction" TargetBehavior="Defend" BorderType="Floor">
+		<Action Name="RunAndHit" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="PunchInteract" TargetBehavior="Defend" BorderType="Floor">
 			<Animation>
 				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
 				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
@@ -173,7 +173,25 @@
 				<Pose Image="/J_run_07.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
 				<Pose Image="/J_run_08.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
 			</Animation>
-		</Action> -->
+		</Action>
+
+
+
+		
+		<Action Name="Defend" Type="Sequence">
+			<ActionReference Name="DefendAction" />
+		</Action>
+
+		<Action Name="DefendAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_defend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="9" />
+				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+			</Animation>
+		</Action>
 
 		<Action Name="HuntBePunch" Type="Sequence">
 			<ActionReference Name="Stand" Duration="5" /> 
@@ -181,10 +199,10 @@
 			<ActionReference Name="RunAndBeHit" />
 		</Action>
 
-		<!-- <Action Name="HuntPunch" Type="Sequence">
+		<Action Name="HuntPunch" Type="Sequence">
 			<ActionReference Name="Stand" Duration="5" /> 
 			<ActionReference Name="RunAndHit" />
-		</Action> -->
+		</Action>
 
 		<!-- Sitting -->
 
