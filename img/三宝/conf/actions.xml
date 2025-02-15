@@ -390,6 +390,16 @@
 			</Animation>
 		</Action>
 
+		<Action Name="FakeFalling" Type="Embedded" Class="com.group_finity.mascot.action.Fall"
+			RegistanceX="0.05" RegistanceY="0.1" Gravity="0">
+			<Animation>
+				<Pose Image="/S_jumpdown_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/S_jumpdown_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/S_jumpdown_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+				<Pose Image="/S_jumpdown_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="5" />
+			</Animation>
+		</Action>
+
 		<Action Name="Bouncing" Type="Animate" BorderType="Floor">
 			<Animation>
 				<Pose Image="/S_faint_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="1" />
@@ -545,15 +555,61 @@
 			<ActionReference Name="Resisting" />
 		</Action>
 
+		<!-- <Action Name="Thrown" Type="Sequence" Loop="false">
+			<Action Type="Sequence" Condition="${mascot.environment.cursor.y &gt;= mascot.environment.screen.height/2}" >
+				<ActionReference Name="FakeFalling" InitialVX="${mascot.environment.cursor.dx - 20}" InitialVY="${mascot.environment.cursor.dy - 20}"/>
+				<Action Type="Select">
+					<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+						<ActionReference Name="Bouncing"/>
+						<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
+					</Action>
+					<ActionReference Name="GrabWall" Duration="100" />
+				</Action>
+			</Action>
+			<Action Type="Sequence" Condition="${mascot.environment.cursor.y &lt; mascot.environment.screen.height/2}" >
+				<ActionReference Name="FakeFalling" InitialVX="${mascot.environment.cursor.dx + 20}" InitialVY="${mascot.environment.cursor.dy + 20}"/>
+				<Action Type="Select">
+					<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+						<ActionReference Name="Bouncing"/>
+						<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
+					</Action>
+					<ActionReference Name="GrabWall" Duration="100" />
+				</Action>
+			</Action> -->
+			<!-- <Action Type="Sequence" Condition="true" >
+				<ActionReference Name="FakeFalling" InitialVX="${mascot.environment.cursor.dx + 20}" InitialVY="${mascot.environment.cursor.dy}"/>
+				<Action Type="Select">
+					<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+						<ActionReference Name="Bouncing"/>
+						<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
+					</Action>
+					<ActionReference Name="GrabWall" Duration="100" />
+				</Action>
+			</Action> -->
+		<!-- </Action> -->
+
 		<!-- ALWAYS REQUIRED -->
 		<Action Name="Thrown" Type="Sequence" Loop="false">
-			<ActionReference Name="Falling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}"/>
-			<Action Type="Select">
-				<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
-					<ActionReference Name="Bouncing"/>
-					<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
-				</Action>
+		<!-- 高空坠落 -->
+			<Action Type="Sequence" Condition="${mascot.environment.cursor.y &lt;= mascot.environment.screen.height/2}">
+				<ActionReference Name="Falling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}" FallY="${mascot.environment.cursor.dy}"/>
+				<Action Type="Select">
+					<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+						<ActionReference Name="FaintWait"/>
+					</Action>
 				<ActionReference Name="GrabWall" Duration="100" />
+				</Action>
+			</Action>
+		<!-- 低空坠落 -->
+			<Action Type="Sequence" Condition="${mascot.environment.cursor.y &gt;= mascot.environment.screen.height/2}">
+				<ActionReference Name="Falling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}" FallY="${mascot.environment.cursor.dy}"/>
+				<Action Type="Select">
+					<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+						<ActionReference Name="Bouncing"/>
+						<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
+					</Action>
+					<ActionReference Name="GrabWall" Duration="100" />
+				</Action>
 			</Action>
 		</Action>
 

@@ -531,15 +531,38 @@
 		</Action>
 
 		<!-- ALWAYS REQUIRED -->
-		<Action Name="Thrown" Type="Sequence" Loop="false">
+		<!-- <Action Name="Thrown" Type="Sequence" Loop="false">
 			<ActionReference Name="RealFalling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}"/>
 			<Action Type="Select">
 				<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
-					<!-- <ActionReference Name="Wheel" Duration="${50+Math.random()*50}" />
-					<ActionReference Name="Sprawl" Duration="200" /> -->
 					<ActionReference Name="Stand" Duration="20" />
 				</Action>
 				<ActionReference Name="GrabWall" Duration="100" />
+			</Action>
+		</Action> -->
+
+		<Action Name="Thrown" Type="Sequence" Loop="false">
+		<!-- 高空坠落 -->
+			<Action Type="Sequence" Condition="${mascot.environment.cursor.y &lt; mascot.environment.screen.height/2}">
+				<ActionReference Name="RealFalling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}"/>
+				<Action Type="Select">
+					<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+						<ActionReference Name="Wheel" Duration="${50+Math.random()*50}" />
+						<ActionReference Name="Sprawl" Duration="200" />
+						<!-- <ActionReference Name="Stand" Duration="20" /> -->
+					</Action>
+					<ActionReference Name="GrabWall" Duration="100" />
+				</Action>
+			</Action>
+		<!-- 低空坠落 -->
+			<Action Type="Sequence" Condition="${mascot.environment.cursor.y &gt;= mascot.environment.screen.height/2}">
+				<ActionReference Name="Falling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}" FallY="${mascot.environment.cursor.dy}"/>
+				<Action Type="Select">
+					<Action Type="Sequence" Condition="${mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor) }">
+						<ActionReference Name="Stand" Duration="20" />
+					</Action>
+					<ActionReference Name="GrabWall" Duration="100" />
+				</Action>
 			</Action>
 		</Action>
 
