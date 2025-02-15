@@ -61,7 +61,7 @@
 		</Action>
 		
 		<!-- 交互动作 -->
-		<Action Name="PunchInteractAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+		<Action Name="PunchInteractAction" Type="Animate" BorderType="Floor">
 			<Animation>
 				<Pose Image="/J_punch_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_punch_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
@@ -77,11 +77,19 @@
 			</Animation>
 		</Action>
 
-		<Action Name="PunchInteract" Type="Sequence">
-			<ActionReference Name="PunchInteractAction" />
+		<Action Name="PunchMove" Type="Move" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="10,0" Duration="1" />
+			</Animation>
 		</Action>
 
-		<Action Name="BePunchedAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor">
+		<Action Name="PunchInteract" Type="Sequence">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="PunchMove" Duration="3"/>
+			<ActionReference Name="PunchInteractAction" Duration="33" />
+		</Action>
+
+		<Action Name="BePunchedAction" Type="Animate" BorderType="Floor">
 			<Animation>
 				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
@@ -103,9 +111,43 @@
 			</Animation>
 		</Action>
 
+		<!-- <Action Name="PreparePunch" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" BorderType="Floor"> -->
+
+
+		<Action Name="BePunchMove" Type="Move" BorderType="Floor">
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="10,0" Duration="1" />
+			</Animation>
+		</Action>
+
 		<Action Name="BePunched" Type="Sequence">
-			<ActionReference Name="BePunchedAction" />
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &gt;= (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="BePunchMove" Duration="3" />
+			<ActionReference Name="BePunchedAction" Duration="33" />
 			<ActionReference Name="GetUp" Duration="27" />
+		</Action>
+
+		<Action Name="DefendMove" Type="Move" BorderType="Floor">
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="10,0" Duration="1" />
+			</Animation>
+		</Action>
+
+		<Action Name="Defend" Type="Sequence">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &gt;= (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="BePunchMove" Duration="3" />
+			<ActionReference Name="DefendAction" Duration="24" />
+		</Action>
+
+		<Action Name="DefendAction" Type="Animate" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_defend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="9" />
+				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+			</Animation>
 		</Action>
 
 		<Action Name="PunchWait" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" Affordance="HitDown" BorderType="Floor">
@@ -172,24 +214,6 @@
 				<Pose Image="/J_run_06.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
 				<Pose Image="/J_run_07.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
 				<Pose Image="/J_run_08.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
-			</Animation>
-		</Action>
-
-
-
-		
-		<Action Name="Defend" Type="Sequence">
-			<ActionReference Name="DefendAction" />
-		</Action>
-
-		<Action Name="DefendAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
-			<Animation>
-				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_defend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="9" />
-				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 			</Animation>
 		</Action>
 
