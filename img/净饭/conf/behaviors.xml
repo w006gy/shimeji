@@ -116,6 +116,7 @@
 		<Behavior Name="BroadcastPunchWait" Frequency="2000" />
 		<Behavior Name="PunchInteract" Frequency="0" Hidden="true" />
 		<Behavior Name="HuntBePunch" Frequency="1000" />
+		<Behavior Name="HuntBePunchFly" Frequency="0" Hidden="true" />
 		<Behavior Name="GetUp" Frequency="0" Hidden="true" />
 		<Behavior Name="Defend" Frequency="0" Hidden="true" />
 		<Behavior Name="HuntPunch" Frequency="1000" />

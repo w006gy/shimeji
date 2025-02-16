@@ -87,6 +87,8 @@
 			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
 			<ActionReference Name="PunchMove" Duration="3"/>
 			<ActionReference Name="PunchInteractAction" Duration="33" />
+			<ActionReference Name="HuntBePunchFly" />
+
 		</Action>
 		
 		<Action Name="BePunchedAction" Type="Animate" BorderType="Floor">
@@ -245,6 +247,19 @@
 			</Animation>
 		</Action>
 
+		<Action Name="RunAndBeHitFly" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown2" Behavior="BePunchedFly" TargetBehavior="JumpPunch" BorderType="Floor">
+			<Animation>
+				<Pose Image="/J_run_01.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_02.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_03.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_04.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_05.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_06.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_07.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/J_run_08.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+			</Animation>
+		</Action>
+
 		<Action Name="HuntBePunch" Type="Sequence">
 			<ActionReference Name="Stand" Duration="5" /> 
 			<!-- a small delay is needed to prevent an infinite loop -->
@@ -254,6 +269,11 @@
 		<Action Name="HuntPunch" Type="Sequence">
 			<ActionReference Name="Stand" Duration="5" /> 
 			<ActionReference Name="RunAndHit" />
+		</Action>
+
+		<Action Name="HuntBePunchFly" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<ActionReference Name="RunAndBeHitFly" />
 		</Action>
 
 		<!-- Sitting -->

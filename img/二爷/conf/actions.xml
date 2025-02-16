@@ -124,8 +124,8 @@
 			<ActionReference Name="Look" LookRight="${mascot.anchor.x &gt;= (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
 			<ActionReference Name="BePunchMove" Duration="3" />
 			<ActionReference Name="DefendAction" Duration="24" />
-			<!-- 反击 放弃不做了 -->
-			<!-- <ActionReference Name="HuntJumpPunch2" /> -->
+			<!-- 反击预备 -->
+			<ActionReference Name="BroadcastPunchWait" Duration="1000" />
 		</Action>
 
 		<Action Name="DefendAction" Type="Animate" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
@@ -151,7 +151,7 @@
 			<ActionReference Name="JumpPunchAction" Duration="30" />
 		</Action>
 
-		<Action Name="PunchWait" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" Affordance="HitDown" BorderType="Floor">
+		<Action Name="PunchWait" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" Affordance="HitDown2" BorderType="Floor">
 			<Animation>
 				<Pose Image="/Huang01_cast_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="1000" />
 			</Animation>
@@ -198,6 +198,25 @@
 				<Pose Image="/bandit04_walk_07.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
 				<Pose Image="/bandit04_walk_08.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
 			</Animation>
+		</Action>
+
+		<Action Name="RunAndBeHit" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="BePunched" TargetBehavior="PunchInteract" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit04_walk_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_04.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_05.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_06.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_07.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+			</Animation>
+		</Action>
+
+		<Action Name="HuntBePunch" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<!-- a small delay is needed to prevent an infinite loop -->
+			<ActionReference Name="RunAndBeHit" />
 		</Action>
 
 		<Action Name="HuntPunchDefend2" Type="Sequence">

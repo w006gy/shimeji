@@ -90,10 +90,11 @@
 		</Condition> -->
 
 		<Behavior Name="BePunched" Frequency="0" Hidden="true" />
-		<Behavior Name="BroadcastPunchWait" Frequency="2000" />
+		<Behavior Name="BroadcastPunchWait" Frequency="0" Hidden="true" />
 		<Behavior Name="PunchInteract" Frequency="0" Hidden="true" />
 		<Behavior Name="HuntPunchDefend2" Frequency="1000" />
 		<Behavior Name="Defend" Frequency="0" Hidden="true" />
+		<Behavior Name="HuntBePunch" Frequency="1000" />
 		<Behavior Name="HuntPunch2" Frequency="1000" />
 		<Behavior Name="HuntJumpPunch2" Frequency="500" />
 		<Behavior Name="JumpPunch" Frequency="0" Hidden="true" />
