@@ -124,8 +124,8 @@
 			<ActionReference Name="Look" LookRight="${mascot.anchor.x &gt;= (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
 			<ActionReference Name="BePunchMove" Duration="3" />
 			<ActionReference Name="DefendAction" Duration="24" />
-			<!-- 反击 -->
-			<ActionReference Name="HuntJumpPunch2" />
+			<!-- 反击 放弃不做了 -->
+			<!-- <ActionReference Name="HuntJumpPunch2" /> -->
 		</Action>
 
 		<Action Name="DefendAction" Type="Animate" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
@@ -211,7 +211,6 @@
 			<ActionReference Name="RunAndHit2" />
 		</Action>
 
-		<!-- 只做反击？ -->
 		<Action Name="HuntJumpPunch2" Type="Sequence">
 			<ActionReference Name="Stand" Duration="5" /> 
 			<ActionReference Name="RunAndJumpPunch2" />

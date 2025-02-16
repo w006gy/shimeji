@@ -95,7 +95,7 @@
 		<Behavior Name="HuntPunchDefend2" Frequency="1000" />
 		<Behavior Name="Defend" Frequency="0" Hidden="true" />
 		<Behavior Name="HuntPunch2" Frequency="1000" />
-		<Behavior Name="HuntJumpPunch2" Frequency="0" />
+		<Behavior Name="HuntJumpPunch2" Frequency="500" />
 		<Behavior Name="JumpPunch" Frequency="0" Hidden="true" />
 		
 		
