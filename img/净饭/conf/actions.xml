@@ -88,7 +88,7 @@
 			<ActionReference Name="PunchMove" Duration="3"/>
 			<ActionReference Name="PunchInteractAction" Duration="33" />
 		</Action>
-
+		
 		<Action Name="BePunchedAction" Type="Animate" BorderType="Floor">
 			<Animation>
 				<Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
@@ -102,17 +102,9 @@
 				<Pose Image="/J_standup_01b.png" ImageAnchor="64,150" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_standup_01a.png" ImageAnchor="64,142" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-<!-- 
-				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
-				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" /> -->
 			</Animation>
 		</Action>
-
-		<!-- <Action Name="PreparePunch" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" BorderType="Floor"> -->
-
+		
 
 		<Action Name="BePunchMove" Type="Move" BorderType="Floor">
 			<Animation>
@@ -147,6 +139,42 @@
 				<Pose Image="/J_defend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="9" />
 				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
 				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+			</Animation>
+		</Action>
+
+		<Action Name="BePunchedFly" Type="Sequence">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &gt;= (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="BePunchMove" Duration="3" />
+			<ActionReference Name="Stand" Duration="21" />
+			<ActionReference Name="BePunchedFlyAction" Duration="30" TargetX="${mascot.anchor.x + (mascot.lookRight ? -1 : 1) * 360}" TargetY="${mascot.environment.workArea.bottom - 120}" />
+			<ActionReference Name="BePunchedFlyFallAction" />
+			<ActionReference Name="GetUp" Duration="27" />
+		</Action>
+
+
+
+<!-- Type="Embedded" Class="com.group_finity.mascot.action.Jump" -->
+		<Action Name="BePunchedFlyAction" Type="Embedded" Class="com.group_finity.mascot.action.Jump" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<!-- <Pose Image="/J_idle_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_06.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/J_idle_07.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" /> -->
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="3,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="3,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="3,0" Duration="3" />
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="3,0" Duration="3" />
+				<!-- <Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="0,4" Duration="7" /> -->
+			</Animation>
+		</Action>
+
+		<Action Name="BePunchedFlyFallAction" Type="Embedded" Class="com.group_finity.mascot.action.Fall"
+			RegistanceX="0.05" RegistanceY="0.1" Gravity="2">
+			<Animation>
+				<Pose Image="/J_standup_01.png" ImageAnchor="64,136" Velocity="-8,0" Duration="12" />
 			</Animation>
 		</Action>
 
