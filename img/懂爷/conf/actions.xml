@@ -77,6 +77,37 @@
 			<ActionReference Name="DanceAction" Duration="${1000+Math.random()*500}" />
 		</Action>
 
+		<!-- 交互动作 -->
+
+		<Action Name="InTouch" Type="Sequence">
+			<ActionReference Name="Stand" Duration="1"/>
+		</Action>
+
+		<Action Name="InTouchAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor">
+			<Animation>
+				<Pose Image="/dance1.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+			</Animation>
+		</Action>
+
+		<Action Name="ScanDance" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="DanceByIf" Behavior="InTouch" TargetBehavior="InTouch" BorderType="Floor">
+			<Animation>
+				<Pose Image="/dance1.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance2.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance3.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance4.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance5.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance6.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance7.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance8.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+			</Animation>
+		</Action>
+
+		<Action Name="DanceByIf" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<!-- a small delay is needed to prevent an infinite loop -->
+			<ActionReference Name="ScanDance" />
+		</Action>
+
 		<!-- Sitting -->
 
 		<!-- <Action Name="Sit" Type="Stay" BorderType="Floor">

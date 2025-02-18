@@ -30,6 +30,8 @@
 		</Behavior>
 
 		<Behavior Name="Dance" Frequency="200" />
+		<Behavior Name="InTouch" Frequency="0" Hidden="true" />
+		<Behavior Name="DanceByIf" Frequency="2000" Hidden="true"/>
 		
 		<!-- ALWAYS REQUIRED -->
 		<Behavior Name="Dragged" Frequency="0" Hidden="true" />
