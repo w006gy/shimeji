@@ -33,6 +33,9 @@
 		<Behavior Name="PullUp" Frequency="0" Hidden="true" />
 		<Behavior Name="Divided" Frequency="0" Hidden="true" />
 
+		<Behavior Name="InTouch" Frequency="0" Hidden="true" />
+		<Behavior Name="BroadcastDance" Frequency="2" />
+
 		<!-- On the Floor -->
 		<Condition Condition="#{mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">
 			<Behavior Name="StandUp" Frequency="200" Hidden="true" />
