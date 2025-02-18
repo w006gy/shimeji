@@ -60,7 +60,7 @@
 			</Animation>
 		</Action>
 
-		<Action Name="Dance" Type="Stay" BorderType="Floor">
+		<Action Name="DanceAction" Type="Stay" BorderType="Floor">
 			<Animation>
 				<Pose Image="/dance1.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/dance2.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
@@ -71,6 +71,10 @@
 				<Pose Image="/dance7.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 				<Pose Image="/dance8.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
 			</Animation>
+		</Action>
+
+		<Action Name="Dance" Type="Sequence" Loop="false">
+			<ActionReference Name="DanceAction" Duration="${1000+Math.random()*500}" />
 		</Action>
 
 		<!-- Sitting -->
