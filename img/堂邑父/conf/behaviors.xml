@@ -34,7 +34,7 @@
 		<Behavior Name="Divided" Frequency="0" Hidden="true" />
 
 		<Behavior Name="InTouch" Frequency="0" Hidden="true" />
-		<Behavior Name="BroadcastDance" Frequency="1000" />
+		<Behavior Name="BroadcastDance" Frequency="50" />
 
 		<!-- On the Floor -->
 		<Condition Condition="#{mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">
