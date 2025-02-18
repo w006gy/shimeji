@@ -60,6 +60,19 @@
 			</Animation>
 		</Action>
 
+		<Action Name="Dance" Type="Stay" BorderType="Floor">
+			<Animation>
+				<Pose Image="/dance1.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance2.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance3.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance4.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance5.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance6.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance7.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/dance8.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+			</Animation>
+		</Action>
+
 		<!-- Sitting -->
 
 		<!-- <Action Name="Sit" Type="Stay" BorderType="Floor">
