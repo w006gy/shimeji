@@ -60,6 +60,181 @@
 			</Animation>
 		</Action>
 
+		<!-- 交互动作 -->
+		<Action Name="PunchInteractAction" Type="Animate" BorderType="Floor">
+			<Animation>
+				<Pose Image="/Huang01_punch_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_punch_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_punch_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_punch_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_punch_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_punch_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_punch_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_punch_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/bandit04_simple_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/bandit04_simple_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/bandit04_simple_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+			</Animation>
+		</Action>
+
+		<Action Name="PunchMove" Type="Move" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<Pose Image="/bandit04_simple_01.png" ImageAnchor="64,136" Velocity="10,0" Duration="1" />
+			</Animation>
+		</Action>
+
+		<Action Name="JumpPunchAction" Type="Move" BorderType="Floor">
+			<Animation>
+				<Pose Image="/Huang01_jumppunch_01.png" ImageAnchor="64,142" Velocity="-3,0" Duration="3" />
+				<Pose Image="/Huang01_jumppunch_01a.png" ImageAnchor="64,150" Velocity="-3,0" Duration="3" />
+				<Pose Image="/Huang01_jumppunch_01b.png" ImageAnchor="64,160" Velocity="-3,0" Duration="3" />
+				<Pose Image="/Huang01_jumppunch_01c.png" ImageAnchor="64,172" Velocity="-3,0" Duration="3" />
+				<Pose Image="/Huang01_jumppunch_01b.png" ImageAnchor="64,160" Velocity="-3,0" Duration="3" />
+				<Pose Image="/Huang01_jumppunch_01a.png" ImageAnchor="64,150" Velocity="-3,0" Duration="3" />
+				<Pose Image="/Huang01_jumppunch_01.png" ImageAnchor="64,142" Velocity="-3,0" Duration="3" />
+				<Pose Image="/Huang01_jumppunch_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="9" />
+			</Animation>
+		</Action>
+
+		<Action Name="JumpPunchMove" Type="Move" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<Pose Image="/bandit04_simple_01.png" ImageAnchor="64,136" Velocity="51,0" Duration="1" />
+			</Animation>
+		</Action>
+
+		<Action Name="BePunchMove" Type="Move" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit04_simple_01.png" ImageAnchor="64,136" Velocity="10,0" Duration="1" />
+			</Animation>
+		</Action>
+
+		<Action Name="DefendMove" Type="Move" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit04_simple_01.png" ImageAnchor="64,136" Velocity="10,0" Duration="1" />
+			</Animation>
+		</Action>
+
+		<Action Name="Defend" Type="Sequence">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &gt;= (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="BePunchMove" Duration="3" />
+			<ActionReference Name="DefendAction" Duration="24" />
+		</Action>
+
+		<Action Name="BePunched" Type="Sequence">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &gt;= (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="BePunchMove" Duration="3" />
+			<ActionReference Name="DefendAction" Duration="24" />
+			<!-- 反击预备 -->
+			<ActionReference Name="BroadcastPunchWait" Duration="1000" />
+		</Action>
+
+		<Action Name="DefendAction" Type="Animate" BorderType="Floor" Behavior="WalkAlongWorkAreaFloor">
+			<Animation>
+				<Pose Image="/bandit04_simple_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/bandit04_simple_02.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/bandit04_simple_03.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/Huang01_defend_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="9" />
+				<Pose Image="/bandit04_simple_04.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+				<Pose Image="/bandit04_simple_05.png" ImageAnchor="64,136" Velocity="0,0" Duration="3" />
+			</Animation>
+		</Action>
+
+		<Action Name="PunchInteract" Type="Sequence">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="PunchMove" Duration="3"/>
+			<ActionReference Name="PunchInteractAction" Duration="33" />
+		</Action>
+
+		<Action Name="JumpPunch" Type="Sequence">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; (mascot.environment.workArea.left + mascot.environment.workArea.width) / 2}" />
+			<ActionReference Name="JumpPunchMove" Duration="3"/>
+			<ActionReference Name="JumpPunchAction" Duration="30" />
+		</Action>
+
+		<Action Name="PunchWait" Type="Embedded" Class="com.group_finity.mascot.action.Broadcast" Affordance="HitDown2" BorderType="Floor">
+			<Animation>
+				<Pose Image="/Huang01_cast_01.png" ImageAnchor="64,136" Velocity="0,0" Duration="1000" />
+			</Animation>
+		</Action>
+
+		<Action Name="BroadcastPunchWait" Type="Sequence">
+			<ActionReference Name="PunchWait" />
+		</Action>
+
+		<Action Name="RunAndJumpPunch2" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="JumpPunch" TargetBehavior="BePunchedFly" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit04_walk_01.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit04_walk_02.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit04_walk_03.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit04_walk_04.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit04_walk_05.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit04_walk_06.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit04_walk_07.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit04_walk_08.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+			</Animation>
+		</Action>
+
+		<Action Name="RunAndPunch2" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="PunchInteract" TargetBehavior="Defend" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit04_walk_01.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_02.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_03.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_04.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_05.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_06.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_07.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_08.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+			</Animation>
+		</Action>
+
+		<Action Name="RunAndHit2" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="PunchInteract" TargetBehavior="BePunched" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit04_walk_01.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_02.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_03.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_04.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_05.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_06.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_07.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+				<Pose Image="/bandit04_walk_08.png" ImageAnchor="64,136" Velocity="-5,0" Duration="2" />
+			</Animation>
+		</Action>
+
+		<Action Name="RunAndBeHit" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="HitDown" Behavior="BePunched" TargetBehavior="PunchInteract" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit04_walk_01.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_02.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_03.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_04.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_05.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_06.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_07.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+				<Pose Image="/bandit04_walk_08.png" ImageAnchor="64,136" Velocity="-3,0" Duration="2" />
+			</Animation>
+		</Action>
+
+		<Action Name="HuntBePunch" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<!-- a small delay is needed to prevent an infinite loop -->
+			<ActionReference Name="RunAndBeHit" />
+		</Action>
+
+		<Action Name="HuntPunchDefend2" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<!-- a small delay is needed to prevent an infinite loop -->
+			<ActionReference Name="RunAndPunch2" />
+		</Action>
+
+		<Action Name="HuntPunch2" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<ActionReference Name="RunAndHit2" />
+		</Action>
+
+		<Action Name="HuntJumpPunch2" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<ActionReference Name="RunAndJumpPunch2" />
+		</Action>
+
 		<!-- Sitting -->
 
 		<!-- <Action Name="Sit" Type="Stay" BorderType="Floor">
