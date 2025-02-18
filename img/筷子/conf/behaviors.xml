@@ -28,6 +28,9 @@
 		<Behavior Name="Walk" Frequency="0" >
 			<BehaviorReference Name="Walk" Frequency="50" />
 		</Behavior>
+
+		<Behavior Name="DanceWithAman" Frequency="0" Hidden="true" />
+		<Behavior Name="HuntAman" Frequency="2000" />
 		
 		<!-- ALWAYS REQUIRED -->
 		<Behavior Name="Dragged" Frequency="0" Hidden="true" />

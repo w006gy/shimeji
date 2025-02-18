@@ -28,6 +28,9 @@
 		<Behavior Name="Walk" Frequency="0" >
 			<BehaviorReference Name="Walk" Frequency="50" />
 		</Behavior>
+
+		<Behavior Name="DanceWithKuaizi" Frequency="0" Hidden="true" />
+		<Behavior Name="BroadcastWaitKuaizi" Frequency="1000" />
 		
 		<!-- ALWAYS REQUIRED -->
 		<Behavior Name="Dragged" Frequency="0" Hidden="true" />

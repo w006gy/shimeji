@@ -60,6 +60,61 @@
 			</Animation>
 		</Action>
 
+		<!-- 交互动作 -->
+
+		<Action Name="DanceWithAman" Type="Sequence">
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+			<ActionReference Name="DanceAction" Duration="96"/>
+		</Action>
+
+		<Action Name="DanceAction" Type="Embedded" Class="com.group_finity.mascot.action.Interact" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit2pdance_00001.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00002.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00003.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00004.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00005.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00006.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00007.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00008.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00009.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00010.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00011.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00012.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00013.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00014.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00015.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+				<Pose Image="/bandit2pdance_00016.png" ImageAnchor="64,136" Velocity="0,0" Duration="6" />
+			</Animation>
+		</Action>
+
+		<Action Name="RunAffordance" Type="Embedded" Class="com.group_finity.mascot.action.ScanMove" Affordance="Dance" Behavior="DanceWithAman" TargetBehavior="DanceWithKuaizi" BorderType="Floor">
+			<Animation>
+				<Pose Image="/bandit05_walk_0001.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit05_walk_0002.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit05_walk_0003.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit05_walk_0004.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit05_walk_0005.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit05_walk_0006.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit05_walk_0007.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+				<Pose Image="/bandit05_walk_0008.png" ImageAnchor="64,136" Velocity="-8,0" Duration="2" />
+			</Animation>
+		</Action>
+
+		<Action Name="HuntAman" Type="Sequence">
+			<ActionReference Name="Stand" Duration="5" /> 
+			<!-- a small delay is needed to prevent an infinite loop -->
+			<ActionReference Name="RunAffordance" />
+		</Action>
+
 		<!-- Sitting -->
 
 		<!-- <Action Name="Sit" Type="Stay" BorderType="Floor">
